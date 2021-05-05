@@ -44,19 +44,32 @@ public class Player : MonoBehaviour
         HandleRotation();
     }
 
+    /**
+     * Rotation Bug Constraints         
+     * right: { 69, -69 }
+     * left:  { 92, -92 }
+    */
     private void HandleRotation() {
-        if (weaponRb.rotation > 65 || weaponRb.rotation < -65) {
+        float absRotation = Mathf.Abs(weaponRb.rotation);
+
+        print(absRotation);
+
+        if (
+            (absRotation >= 69 && absRotation <= 92) ||
+            (absRotation <=-69 && absRotation >=-92)
+        ) {
+            return;
+        }
+
+        if (absRotation > 90 || absRotation < -90) {
             transform.localScale = new Vector3(-1, 1, 1);
 
-            weaponTransform.transform.localScale = new Vector3(-1, -1, 1);
-        }
-        else if (Mathf.Abs(weaponRb.rotation) == -90 || Mathf.Abs(weaponRb.rotation) == 90) {
-            return;
+            weaponTransform.localScale = new Vector3(-1, -1, 1);
         }
         else {
             transform.localScale = new Vector3(1, 1, 1);
 
-            weaponTransform.transform.localScale = new Vector3(1, 1, 1);
+            weaponTransform.localScale = new Vector3(1, 1, 1); 
         }
     }
 

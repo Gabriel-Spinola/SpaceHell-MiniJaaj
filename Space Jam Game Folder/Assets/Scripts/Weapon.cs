@@ -12,6 +12,8 @@ public class Weapon : MonoBehaviour
     private Vector2 mousePos;
     private Vector2 lookDir;
 
+    private float angle;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,17 +21,26 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        HandleRotation();
+
         mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
 
         lookDir = mousePos - rb.position;
-        rb.rotation = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+        angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
 
-        rb.position = (rb.rotation > 90 || rb.rotation < -90) ?
-            new Vector2(playerPos.position.x + -0.5f, playerPos.position.y) :
-            new Vector2(playerPos.position.x + 0.5f, playerPos.position.y);
+        rb.rotation = angle;        
     }
 
-    private void FixedUpdate() {
-        
+    private void HandleRotation() {
+        float absRotation = Mathf.Abs(angle);
+
+        if (
+            (absRotation <= 69 && absRotation >= 92) ||
+            (absRotation >=-69 && absRotation <=-92)
+        ) { 
+            rb.position = (absRotation > 90 || absRotation < -90) ?
+                new Vector2(playerPos.position.x + -0.5f, playerPos.position.y) :
+                new Vector2(playerPos.position.x + 0.5f, playerPos.position.y);
+        }
     }
 }
