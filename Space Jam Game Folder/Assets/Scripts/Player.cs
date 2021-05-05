@@ -6,9 +6,12 @@ public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
 
-    [SerializeField] private Camera camera;
+    [SerializeField] private Rigidbody2D weaponRb;
+    [SerializeField] private Transform weaponTransform;
 
     [SerializeField] private float moveSpeed;
+
+    private SpriteRenderer sprite;
 
     private Vector2 movement;
     private Vector2 mousePos;
@@ -18,11 +21,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    void Start() 
-    {
-        
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -31,8 +30,6 @@ public class Player : MonoBehaviour
 
         movement.x = xAxis;
         movement.y = yAxis;
-
-        mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void FixedUpdate() 
@@ -44,10 +41,23 @@ public class Player : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
 
-        Vector2 lookDir = mousePos - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+        HandleRotation();
+    }
 
-        rb.rotation = angle;
+    private void HandleRotation() {
+        if (weaponRb.rotation > 65 || weaponRb.rotation < -65) {
+            transform.localScale = new Vector3(-1, 1, 1);
+
+            weaponTransform.transform.localScale = new Vector3(-1, -1, 1);
+        }
+        else if (Mathf.Abs(weaponRb.rotation) == -90 || Mathf.Abs(weaponRb.rotation) == 90) {
+            return;
+        }
+        else {
+            transform.localScale = new Vector3(1, 1, 1);
+
+            weaponTransform.transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     private void GetInput() 
