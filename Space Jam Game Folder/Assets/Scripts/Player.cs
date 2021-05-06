@@ -11,8 +11,6 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float moveSpeed;
 
-    private SpriteRenderer sprite;
-
     private Vector2 movement;
     private Vector2 mousePos;
 
@@ -21,7 +19,6 @@ public class Player : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
