@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float speed;
 
+    public int damage;
+
     void Update()
     {
         transform.Translate(Vector3.right * Time.deltaTime * speed);
@@ -17,6 +19,10 @@ public class Bullet : MonoBehaviour
     {
         if (!other.CompareTag("Player")) {
             Destroy(gameObject);
+        }
+
+        if (other.CompareTag("Enemy")) {
+            Enemy.I.TakeDamage(damage);
         }
     }
 

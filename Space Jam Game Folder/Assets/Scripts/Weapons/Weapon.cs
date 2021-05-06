@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private int ammo;
     [SerializeField] private float reloadSpeed;
     [SerializeField] private float fireRate;
+    [SerializeField] private int damage;
 
     private Rigidbody2D rb;
 
@@ -77,7 +78,8 @@ public class Weapon : MonoBehaviour
 
     private void SingleShoot() 
     {
-        Instantiate(bullet, gunTip.position, transform.rotation);
+        Bullet currentBullet = Instantiate(bullet, gunTip.position, transform.rotation).GetComponent<Bullet>();
+        currentBullet.damage = damage;
 
         currentAmmo--;
     }
@@ -87,7 +89,9 @@ public class Weapon : MonoBehaviour
         if (Time.time >= nextTimeToFire) {
             nextTimeToFire = Time.time + 1f / fireRate;
 
-            Instantiate(bullet, gunTip.position, transform.rotation);
+            Bullet currentBullet = Instantiate(bullet, gunTip.position, transform.rotation).GetComponent<Bullet>();
+            currentBullet.damage = damage;
+
             currentAmmo--;
         }
     }
