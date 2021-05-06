@@ -78,20 +78,26 @@ public class Weapon : MonoBehaviour
 
     private void SingleShoot() 
     {
+        // Instancia a bala e seta o dano
         Bullet currentBullet = Instantiate(bullet, gunTip.position, transform.rotation).GetComponent<Bullet>();
         currentBullet.damage = damage;
 
+        // diminui a munição
         currentAmmo--;
     }
 
     private void AutoShoot()
     {
         if (Time.time >= nextTimeToFire) {
+            // pega a proxima vez que a arma podera atirar
             nextTimeToFire = Time.time + 1f / fireRate;
 
+
+            // Instancia a bala e seta o dano
             Bullet currentBullet = Instantiate(bullet, gunTip.position, transform.rotation).GetComponent<Bullet>();
             currentBullet.damage = damage;
 
+            // diminui a munição
             currentAmmo--;
         }
     }
@@ -113,9 +119,7 @@ public class Weapon : MonoBehaviour
         lookAngle = StaticRes.LookDir(transform.position);
         transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, lookAngle));
 
-        transform.localScale = lookAngle < 90 && lookAngle > -90 ?
-            new Vector3(1f, 1f, 1f) :
-            new Vector3(-1f, -1f, 1f)
-        ;
+        // Aqui que tá o bug da rotação ):
+        transform.localScale = lookAngle < 90 && lookAngle > -90 ? new Vector3(1f, 1f, 1f) : new Vector3(-1f, -1f, 1f);
     }
 }

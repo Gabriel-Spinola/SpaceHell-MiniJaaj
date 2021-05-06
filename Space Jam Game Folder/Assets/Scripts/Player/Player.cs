@@ -30,21 +30,26 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        // Pega a direção em que o player esta olhando (em angulo)
         lookAngle = StaticRes.LookDir(transform.position);
         FlipSprite();
         
+        // Seta os inputs
         movement.x = InputManager.I.xAxis;
         movement.y = InputManager.I.yAxis;
 
+        // Morre
         if (health <= 0)
             StartCoroutine(Die());
     }
 
     private void FixedUpdate()
     {
+        // Move o player
         rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
     }
 
+    // Flip o sprite baseado na direção que ele esta olhando
     private void FlipSprite() => transform.localScale = lookAngle < 90 && lookAngle > -90 ?
         new Vector3(1f, 1f, 1f) :
         new Vector3(-1f, 1f, 1f)
