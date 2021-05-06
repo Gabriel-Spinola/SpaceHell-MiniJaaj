@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Resources;
+using UnityEngine.PlayerLoop;
 
 public class Weapon : MonoBehaviour
 {
@@ -20,10 +21,17 @@ public class Weapon : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private bool isReloading;
+
     private float lookAngle;
     private float nextTimeToFire = 0f;
 
     private int currentAmmo;
+
+    private void OnEnable() 
+    {
+        isReloading = false;    
+    }
 
     void Start()
     {
@@ -35,6 +43,25 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         HandleRotation();
+        HandleWeapon();
+    }
+
+    private void HandleWeapon() 
+    {
+        if (isReloading) {
+            return;
+        }
+
+        // Se a munição acabar inicia o reload automaticamente
+        if (currentAmmo <= 0) {
+            StartCoroutine(Reload());
+
+            return;
+        }
+
+        if (InputManager.I.isReloadingKey && currentAmmo < ammo) {
+            StartCoroutine(Reload());
+        }
 
         if (isAuto) {
             if (InputManager.I.isShootingKeyPressed && currentAmmo >= 1) {
@@ -45,10 +72,6 @@ public class Weapon : MonoBehaviour
             if (InputManager.I.isShootingKeyDown && currentAmmo >= 1) {
                 SingleShoot();
             }
-        }
-
-        if (InputManager.I.isReloadingKey) {
-            StartCoroutine(Reload());
         }
     }
 
@@ -70,13 +93,13 @@ public class Weapon : MonoBehaviour
     }
 
     private IEnumerator Reload() 
-    {
-        if (currentAmmo == ammo) {
-            yield return null;
-        }
-        
+    {     
+        isReloading = true;
+
         // Animation
         yield return new WaitForSeconds(reloadSpeed);
+
+        isReloading = false;
 
         currentAmmo = ammo;
     }
