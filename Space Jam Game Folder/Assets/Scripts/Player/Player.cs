@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Resources;
 
 public class Player : MonoBehaviour
@@ -10,12 +11,15 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
 
     [Header("Movement")]
-    [SerializeField] private float moveSpeed = 0f;
+    [SerializeField] private float moveSpeed;
+
+    [Header("Stats")]
+
+    [SerializeField] private short health;
 
     private float lookAngle;
 
     private Vector2 movement;
-    private Vector2 mousePos;
 
     private void Awake() 
     {
@@ -28,20 +32,31 @@ public class Player : MonoBehaviour
     {
         lookAngle = StaticRes.LookDir(transform.position);
         FlipSprite();
-
+        
         movement.x = InputManager.I.xAxis;
         movement.y = InputManager.I.yAxis;
+
+        if (health <= 0)
+            StartCoroutine(Die());
     }
 
     private void FixedUpdate()
     {
-        Movement();
-    }
-
-    private void Movement()
-    {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
     }
 
-    private void FlipSprite() => transform.localScale = lookAngle < 90 && lookAngle > -90 ? new Vector3(1f, 1f, 1f) : new Vector3(-1f, 1f, 1f);
+    private void FlipSprite() => transform.localScale = lookAngle < 90 && lookAngle > -90 ?
+        new Vector3(1f, 1f, 1f) :
+        new Vector3(-1f, 1f, 1f)
+    ;
+
+    private IEnumerator Die() {
+        Destroy(gameObject);
+
+        // Animação de morte e mais
+        yield return null;
+
+        // Restarta a Scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
