@@ -9,8 +9,6 @@ public class Enemy : MonoBehaviour
         ATTACKING
     }
 
-    
-
     [Header("References")]
     public Transform player;
     [SerializeField] protected LayerMask whatIsPlayer;

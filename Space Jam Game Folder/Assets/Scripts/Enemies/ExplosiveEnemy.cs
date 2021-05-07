@@ -8,6 +8,9 @@ public class ExplosiveEnemy : Enemy
     [SerializeField] private float explosionRadius;
     [SerializeField] private int explosionDamage;
     
+    [Space]
+    [SerializeField] private bool drawGizmos;
+
     private bool hasPlayerBeenAffected;
 
     private void Awake() => rb = GetComponent<Rigidbody2D>();
@@ -25,8 +28,6 @@ public class ExplosiveEnemy : Enemy
                 StartCoroutine(Attack());
             }
         }
-
-        print(enemyState);
     }
 
     private void FixedUpdate() {
@@ -58,7 +59,9 @@ public class ExplosiveEnemy : Enemy
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(transform.position, explosionRadius);
+        if (drawGizmos) {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawSphere(transform.position, explosionRadius);
+        }
     }
 }
