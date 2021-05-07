@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private bool isEnemy;
 
     public int damage;
 
@@ -17,12 +18,23 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if (!other.CompareTag("Player") && !other.CompareTag("Bullets")) {
-            Destroy(gameObject);
-        }
+        if (!isEnemy) {
+            if (!other.CompareTag("Player") && !other.CompareTag("Bullets")) {
+                Destroy(gameObject);
+            }
 
-        if (other.CompareTag("Enemy")) {
-            Enemy.I.TakeDamage(damage);
+            if (other.CompareTag("Enemy")) {
+                Enemy.I.TakeDamage(damage);
+            }
+        }
+        else {
+            if (!other.CompareTag("Enemy") && !other.CompareTag("Enemy Bullets")) {
+                Destroy(gameObject);
+            }
+
+            if (other.CompareTag("Player")) {
+                Player.I.TakeDamage(damage);
+            }
         }
     }
 

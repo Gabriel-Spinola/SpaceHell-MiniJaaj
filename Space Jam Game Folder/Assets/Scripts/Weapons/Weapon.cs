@@ -9,41 +9,39 @@ public class Weapon : MonoBehaviour
     [Header("References")]
     public GameObject bullet;
     
-    [SerializeField] private Transform gunTip;
+    [SerializeField] protected Transform gunTip;
 
     [Header("Config")]
     [SerializeField] private bool isAuto;
 
     [Header("Stats")]
-    [SerializeField] private int ammo;
-    [SerializeField] private float reloadSpeed;
-    [SerializeField] private float fireRate;
-    [SerializeField] private int damage;
+    [SerializeField] protected int ammo;
+    [SerializeField] protected float reloadSpeed;
+    [SerializeField] protected float fireRate;
+    [SerializeField] protected int damage;
 
-    private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
+    protected SpriteRenderer spriteRenderer;
 
-    private bool isReloading;
+    protected bool isReloading;
 
-    private float lookAngle;
-    private float nextTimeToFire = 0f;
+    protected float lookAngle;
+    protected float nextTimeToFire = 0f;
 
-    private int currentAmmo;
+    protected int currentAmmo;
 
     private void OnEnable() 
     {
         isReloading = false;    
     }
 
-    void Start()
+    private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
 
         currentAmmo = ammo;
     }
 
-    void Update()
+    private void Update()
     {
         HandleRotation();
         HandleWeapon();
@@ -78,7 +76,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private void SingleShoot() 
+    protected void SingleShoot() 
     {
         // Instancia a bala e seta o dano
         Bullet currentBullet = Instantiate(bullet, gunTip.position, transform.rotation).GetComponent<Bullet>();
@@ -88,7 +86,7 @@ public class Weapon : MonoBehaviour
         currentAmmo--;
     }
 
-    private void AutoShoot()
+    protected void AutoShoot()
     {
         if (Time.time >= nextTimeToFire) {
             // pega a proxima vez que a arma podera atirar
@@ -104,7 +102,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private IEnumerator Reload() 
+    protected IEnumerator Reload() 
     {     
         isReloading = true;
 

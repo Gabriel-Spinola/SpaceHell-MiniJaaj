@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     private ENEMY_STATE enemyState;
 
     [Header("References")]
-    [SerializeField] private Transform player;
+    public Transform player;
     [SerializeField] private LayerMask whatIsPlayer;
 
     [Header("Stats")]   
@@ -50,14 +50,14 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (player != null && enemyState == ENEMY_STATE.CHASING) {
-            Chase();
+        if (player != null && enemyState == ENEMY_STATE.ATTACKING) {
+            Attack();
         }
     }
 
     private void FixedUpdate() {
         if (player != null && enemyState == ENEMY_STATE.CHASING) {
-            Attack();
+            Chase();
         }
     }
 
@@ -65,11 +65,13 @@ public class Enemy : MonoBehaviour
     {
         isAttacking = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
 
-        enemyState = !isAttacking ? ENEMY_STATE.CHASING : ENEMY_STATE.ATTACKING; 
+        enemyState = isAttacking ? ENEMY_STATE.ATTACKING : ENEMY_STATE.CHASING; 
     }
 
     private void Chase() 
     {
+        EnemyWeapon.canShoot = false;
+
         dir = transform.position - player.position;
         dir.Normalize();
 
@@ -78,7 +80,7 @@ public class Enemy : MonoBehaviour
 
     private void Attack() 
     {
-        
+        EnemyWeapon.canShoot = true;
     }
 
     public void TakeDamage(int damage) => health -= damage;

@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 
     [Header("Stats")]
 
-    [SerializeField] private short health;
+    [SerializeField] private int health;
 
     private float lookAngle;
 
@@ -63,4 +63,6 @@ public class Player : MonoBehaviour
         // Restarta a Scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void TakeDamage(int damage) => health -= damage;
 }

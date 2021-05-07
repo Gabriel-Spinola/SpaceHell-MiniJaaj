@@ -17,9 +17,9 @@ namespace Resources
             return Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
         }
 
-        public static float TargetLookDir2D(Vector2 self, Vector2 target)
+        public static float TargetLookDir2D(Vector3 self, Vector3 target)
         {
-            Vector2 dir = self - target;
+            Vector2 dir = target - self;
 
             return Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         }
