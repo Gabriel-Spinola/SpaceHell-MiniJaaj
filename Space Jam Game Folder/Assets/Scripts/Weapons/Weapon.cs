@@ -21,6 +21,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private int damage;
 
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
 
     private bool isReloading;
 
@@ -36,6 +37,7 @@ public class Weapon : MonoBehaviour
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
 
         currentAmmo = ammo;
@@ -119,7 +121,6 @@ public class Weapon : MonoBehaviour
         lookAngle = StaticRes.LookDir(transform.position);
         transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, lookAngle));
 
-        // Aqui que tá o bug da rotação ):
-        transform.localScale = lookAngle < 90 && lookAngle > -90 ? new Vector3(1f, 1f, 1f) : new Vector3(-1f, -1f, 1f);
+        spriteRenderer.flipY = lookAngle < 90 && lookAngle > -90 ? false : true;
     }
 }

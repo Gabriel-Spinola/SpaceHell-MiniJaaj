@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public static Player I { get; private set; }
 
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
 
     [Header("Movement")]
     [SerializeField] private float moveSpeed;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
     {
         I = this;
 
+        spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -50,10 +52,7 @@ public class Player : MonoBehaviour
     }
 
     // Flip o sprite baseado na direção que ele esta olhando
-    private void FlipSprite() => transform.localScale = lookAngle < 90 && lookAngle > -90 ?
-        new Vector3(1f, 1f, 1f) :
-        new Vector3(-1f, 1f, 1f)
-    ;
+    private void FlipSprite() => spriteRenderer.flipX = lookAngle < 90 && lookAngle > -90 ? false : true;
 
     private IEnumerator Die() {
         Destroy(gameObject);
