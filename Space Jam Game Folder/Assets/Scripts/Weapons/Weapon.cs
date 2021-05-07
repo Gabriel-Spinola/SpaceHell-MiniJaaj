@@ -1,8 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Resources;
-using UnityEngine.PlayerLoop;
 
 public class Weapon : MonoBehaviour
 {
@@ -19,6 +17,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] protected float reloadSpeed;
     [SerializeField] protected float fireRate;
     [SerializeField] protected int damage;
+    [SerializeField] protected float bulletSpeed;
 
     protected SpriteRenderer spriteRenderer;
 
@@ -81,6 +80,7 @@ public class Weapon : MonoBehaviour
         // Instancia a bala e seta o dano
         Bullet currentBullet = Instantiate(bullet, gunTip.position, transform.rotation).GetComponent<Bullet>();
         currentBullet.damage = damage;
+        currentBullet.speed = bulletSpeed;
 
         // diminui a munição
         currentAmmo--;
@@ -96,6 +96,7 @@ public class Weapon : MonoBehaviour
             // Instancia a bala e seta o dano
             Bullet currentBullet = Instantiate(bullet, gunTip.position, transform.rotation).GetComponent<Bullet>();
             currentBullet.damage = damage;
+            currentBullet.speed = bulletSpeed;
 
             // diminui a munição
             currentAmmo--;

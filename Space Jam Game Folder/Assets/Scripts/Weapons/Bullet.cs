@@ -1,39 +1,43 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    public static Bullet I { get; private set; }
+
     [SerializeField] private bool isEnemy;
 
-    public int damage;
+    [HideInInspector] public int damage;
+
+    [HideInInspector] public float speed;
 
     void Update()
     {
         transform.Translate(Vector3.right * Time.deltaTime * speed);
 
-        StartCoroutine(DestroyBulletOnTimer(3f));
+        StartCoroutine(DestroyBulletOnTimer(6f));
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if (!isEnemy) {
-            if (!other.CompareTag("Player") && !other.CompareTag("Bullets")) {
-                Destroy(gameObject);
-            }
+        if (!other.CompareTag("Bullets")) {
+            if (!isEnemy) {
+                if (!other.CompareTag("Player")) {
+                    Destroy(gameObject);
+                }
 
-            if (other.CompareTag("Enemy")) {
-                Enemy.I.TakeDamage(damage);
+                if (other.CompareTag("Enemy")) {
+                    Enemy.TakeDamage(damage);
+                }
             }
-        }
-        else {
-            if (!other.CompareTag("Enemy") && !other.CompareTag("Enemy Bullets")) {
-                Destroy(gameObject);
-            }
+            else {
+                if (!other.CompareTag("Enemy")) {
+                    Destroy(gameObject);
+                }
 
-            if (other.CompareTag("Player")) {
-                Player.I.TakeDamage(damage);
+                if (other.CompareTag("Player")) {
+                    Player.I.TakeDamage(damage);
+                }
             }
         }
     }

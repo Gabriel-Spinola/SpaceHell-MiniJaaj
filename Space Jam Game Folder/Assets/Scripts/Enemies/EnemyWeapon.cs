@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Resources;
+﻿using Resources;
 using UnityEngine;
 
 public class EnemyWeapon : Weapon
@@ -40,7 +38,7 @@ public class EnemyWeapon : Weapon
                 self: transform.position,
                 target: Enemy.I.player.transform.position
             );
-            
+
             transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, lookAngle));  
         }
 

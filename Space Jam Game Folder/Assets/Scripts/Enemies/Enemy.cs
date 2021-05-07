@@ -1,34 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Resources;
+﻿using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     public static Enemy I { get; private set; }
 
-    private enum ENEMY_STATE {
+    protected enum ENEMY_STATE {
         CHASING,
         ATTACKING
     }
 
-    private ENEMY_STATE enemyState;
+    
 
     [Header("References")]
     public Transform player;
-    [SerializeField] private LayerMask whatIsPlayer;
+    [SerializeField] protected LayerMask whatIsPlayer;
 
+    [Space]
     [Header("Stats")]   
-    [SerializeField] private int health;
-    [SerializeField] private float speed;
+    [SerializeField] protected int health;
+    [SerializeField] protected float speed;
     [SerializeField] private float attackRadius;
 
-    private Rigidbody2D rb;
+    protected ENEMY_STATE enemyState;
+    protected Rigidbody2D rb;
+    protected Vector2 dir;
 
-    private Vector2 dir;
-    private Vector2 movement;
-
-    private bool isAttacking;
+    protected bool isAttacking;
 
     private void Awake()
     { 
@@ -50,8 +47,13 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (player != null && enemyState == ENEMY_STATE.ATTACKING) {
-            Attack();
+        if (player != null) {
+            if (enemyState == ENEMY_STATE.ATTACKING) {
+                Attack();
+            }
+        }
+        else {
+            EnemyWeapon.canShoot = false;
         }
     }
 
@@ -61,7 +63,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void CheckEnemyState() 
+    protected void CheckEnemyState() 
     {
         isAttacking = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
 
@@ -83,5 +85,5 @@ public class Enemy : MonoBehaviour
         EnemyWeapon.canShoot = true;
     }
 
-    public void TakeDamage(int damage) => health -= damage;
+    public static void TakeDamage(int damage) => I.health -= damage;
 }
