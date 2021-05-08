@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     protected ENEMY_STATE enemyState;
     protected Rigidbody2D rb;
     protected Vector2 dir;
+    private Animator animator;
 
     protected bool isAttacking;
 
@@ -30,6 +31,7 @@ public class Enemy : MonoBehaviour
         I = this;
 
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -39,6 +41,8 @@ public class Enemy : MonoBehaviour
 
     private void Update() 
     {
+        animator.SetBool("isChasing", !isAttacking);
+
         CheckEnemyState();
 
         if (health <= 0) {
@@ -83,5 +87,14 @@ public class Enemy : MonoBehaviour
         EnemyWeapon.canShoot = true;
     }
 
-    public static void TakeDamage(int damage) => I.health -= damage;
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if (other.CompareTag("Bullets")) {
+            Bullet bullet = other.GetComponent<Bullet>();
+
+            if(!bullet.isEnemy) {
+                health -= other.GetComponent<Bullet>().damage;
+            }
+        }
+    }
 }

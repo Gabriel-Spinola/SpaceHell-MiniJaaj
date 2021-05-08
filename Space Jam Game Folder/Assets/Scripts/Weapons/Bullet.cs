@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour
 {
     public static Bullet I { get; private set; }
 
-    [SerializeField] private bool isEnemy;
+    public bool isEnemy;
 
     [HideInInspector] public int damage;
 
@@ -24,10 +24,6 @@ public class Bullet : MonoBehaviour
             if (!isEnemy) {
                 if (!other.CompareTag("Player")) {
                     Destroy(gameObject);
-                }
-
-                if (other.CompareTag("Enemy")) {
-                    Enemy.TakeDamage(damage);
                 }
             }
             else {

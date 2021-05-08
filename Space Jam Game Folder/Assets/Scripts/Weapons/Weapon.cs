@@ -4,6 +4,8 @@ using Resources;
 
 public class Weapon : MonoBehaviour
 {
+    public static Weapon I { get; private set; }
+
     [Header("References")]
     public GameObject bullet;
     
@@ -13,10 +15,11 @@ public class Weapon : MonoBehaviour
     [SerializeField] private bool isAuto;
 
     [Header("Stats")]
+    public int damage;
+
     [SerializeField] protected int ammo;
     [SerializeField] protected float reloadSpeed;
     [SerializeField] protected float fireRate;
-    [SerializeField] protected int damage;
     [SerializeField] protected float bulletSpeed;
 
     protected SpriteRenderer spriteRenderer;
@@ -91,7 +94,6 @@ public class Weapon : MonoBehaviour
         if (Time.time >= nextTimeToFire) {
             // pega a proxima vez que a arma podera atirar
             nextTimeToFire = Time.time + 1f / fireRate;
-
 
             // Instancia a bala e seta o dano
             Bullet currentBullet = Instantiate(bullet, gunTip.position, transform.rotation).GetComponent<Bullet>();
