@@ -23,8 +23,8 @@ public class BounceBullet : Bullet
         transform.Translate(direction.normalized * speed * Time.deltaTime);
         
         if (
-            Physics2D.Raycast(transform.position, Vector2.right, 0.6f, whatIsWall) ||
-            Physics2D.Raycast(transform.position, Vector2.left, 0.6f, whatIsWall)
+            Physics2D.Raycast(transform.position, Vector2.right, 0.5f, whatIsWall) ||
+            Physics2D.Raycast(transform.position, Vector2.left, 0.5f, whatIsWall)
         ) {
             direction.x = -direction.x + Random.Range(-2f, 2f);
 
@@ -32,8 +32,8 @@ public class BounceBullet : Bullet
         }
 
         if (
-            Physics2D.Raycast(transform.position, Vector2.up, 0.6f, whatIsWall) ||
-            Physics2D.Raycast(transform.position, Vector2.down, 0.6f, whatIsWall)
+            Physics2D.Raycast(transform.position, Vector2.up, 0.5f, whatIsWall) ||
+            Physics2D.Raycast(transform.position, Vector2.down, 0.5f, whatIsWall)
         ) {
             direction.y = -direction.y + Random.Range(-2f, 2f);
 

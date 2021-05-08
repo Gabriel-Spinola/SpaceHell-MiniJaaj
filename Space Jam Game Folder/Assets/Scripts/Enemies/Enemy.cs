@@ -96,5 +96,11 @@ public class Enemy : MonoBehaviour
                 health -= bullet.damage;
             }
         }
+
+        if (other.CompareTag("Explosion")) {
+            Explosion explosion = other.GetComponent<Explosion>();
+
+            health -= explosion.damage;
+        }
     }
 }

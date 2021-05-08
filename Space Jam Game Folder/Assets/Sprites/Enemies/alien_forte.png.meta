@@ -11,6 +11,21 @@ TextureImporter:
   - first:
       213: -8940711292226119966
     second: alien_forte_2
+  - first:
+      213: 8524849983078447274
+    second: alien_forte_0
+  - first:
+      213: 5344852544211380639
+    second: alien_forte_1
+  - first:
+      213: -1415300914586811268
+    second: alien_forte_2
+  - first:
+      213: 5220864789638669071
+    second: alien_forte_3
+  - first:
+      213: -1637938909366531618
+    second: alien_forte_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -110,8 +125,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f8beef0f005ff040800000000000000
-      internalID: 4683550163110639864
+      spriteID: aa8b2ec94e95e4670800000000000000
+      internalID: 8524849983078447274
       vertices: []
       indices: 
       edges: []
@@ -131,8 +146,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28bb9b963e55ef760800000000000000
-      internalID: 7493521265210801026
+      spriteID: f99ef8a121bbc2a40800000000000000
+      internalID: 5344852544211380639
       vertices: []
       indices: 
       edges: []
@@ -152,8 +167,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e6d98b13763ce380800000000000000
-      internalID: -8940711292226119966
+      spriteID: c7484c71157db5ce0800000000000000
+      internalID: -1415300914586811268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_forte_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03e1c66ddc347840800000000000000
+      internalID: 5220864789638669071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_forte_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed9ca677d3fd449e0800000000000000
+      internalID: -1637938909366531618
       vertices: []
       indices: 
       edges: []
