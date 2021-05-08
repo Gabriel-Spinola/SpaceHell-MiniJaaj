@@ -93,7 +93,7 @@ public class Enemy : MonoBehaviour
             Bullet bullet = other.GetComponent<Bullet>();
 
             if(!bullet.isEnemy) {
-                health -= other.GetComponent<Bullet>().damage;
+                health -= bullet.damage;
             }
         }
     }
