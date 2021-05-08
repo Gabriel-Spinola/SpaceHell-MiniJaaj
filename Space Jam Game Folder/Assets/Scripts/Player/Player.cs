@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     [Header("Movement")]
     [SerializeField] private float moveSpeed;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
     {
         I = this;
 
+        animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -46,6 +48,8 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        animator.SetBool("isMoving", InputManager.I.xAxis != 0 || InputManager.I.yAxis != 0);
+
         // Move o player
         rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
     }

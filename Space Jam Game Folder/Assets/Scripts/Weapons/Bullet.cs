@@ -8,15 +8,16 @@ public class Bullet : MonoBehaviour
 
     public bool isEnemy;
 
+    [SerializeField] protected float lifeTime;
     [HideInInspector] public int damage;
 
     [HideInInspector] public float speed;
 
-    void Update()
+    private void Update()
     {
         transform.Translate(Vector3.right * Time.deltaTime * speed);
 
-        StartCoroutine(DestroyBulletOnTimer(6f));
+        StartCoroutine(DestroyBulletOnTimer(lifeTime));
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -39,7 +40,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    private IEnumerator DestroyBulletOnTimer(float timer) {
+    protected IEnumerator DestroyBulletOnTimer(float timer) {
         yield return new WaitForSeconds(timer);
 
         Destroy(gameObject);
