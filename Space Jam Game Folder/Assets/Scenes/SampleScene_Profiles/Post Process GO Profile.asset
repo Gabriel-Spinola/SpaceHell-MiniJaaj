@@ -48,8 +48,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   keyValue:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 1.17
   eyeAdaptation:
     overrideState: 0
     value: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 2
+    value: 4
   threshold:
     overrideState: 0
     value: 1
@@ -213,10 +213,10 @@ MonoBehaviour:
     value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     overrideState: 1
-    value: 0
+    value: 2
   saturation:
     overrideState: 1
-    value: 2
+    value: 5
   brightness:
     overrideState: 0
     value: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
     value: 1.4
   contrast:
     overrideState: 1
-    value: 1
+    value: 2
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
