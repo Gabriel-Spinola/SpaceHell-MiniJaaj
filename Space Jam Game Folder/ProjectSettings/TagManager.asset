@@ -60,3 +60,9 @@ TagManager:
   - name: Weapon
     uniqueID: 2827046725
     locked: 0
+  - name: Explosion
+    uniqueID: 2603616821
+    locked: 0
+  - name: Tile Set
+    uniqueID: 716987593
+    locked: 0
