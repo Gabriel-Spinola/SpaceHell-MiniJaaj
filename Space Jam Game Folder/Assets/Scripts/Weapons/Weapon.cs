@@ -17,10 +17,14 @@ public class Weapon : MonoBehaviour
     [Header("Stats")]
     public int damage;
 
+    [SerializeField] protected bool isShotgun;
+
     [SerializeField] protected int ammo;
     [SerializeField] protected float reloadSpeed;
     [SerializeField] protected float fireRate;
     [SerializeField] protected float bulletSpeed;
+    [SerializeField] protected float spread;
+
     [SerializeField] protected Vector3 bulletScale;
 
     protected SpriteRenderer spriteRenderer;

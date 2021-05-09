@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
 
     protected ENEMY_STATE enemyState;
     protected Rigidbody2D rb;
+    protected SpriteRenderer spriteRenderer;
     protected Vector2 dir;
     private Animator animator;
 
@@ -32,6 +33,7 @@ public class Enemy : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
@@ -50,6 +52,8 @@ public class Enemy : MonoBehaviour
         }
 
         if (player != null) {
+            HandleFlip();
+
             if (enemyState == ENEMY_STATE.ATTACKING) {
                 Attack();
             }
@@ -104,5 +108,13 @@ public class Enemy : MonoBehaviour
 
             health -= explosion.damage;
         }
+    }
+
+    protected void HandleFlip() 
+    {
+        Vector2 dir_ = transform.position - player.position;
+        float lookAngle = Mathf.Atan2(dir_.y, dir_.x) * Mathf.Rad2Deg;
+
+        spriteRenderer.flipX = lookAngle < 90 && lookAngle > -90 ? true : false;
     }
 }

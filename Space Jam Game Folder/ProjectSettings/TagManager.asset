@@ -9,6 +9,10 @@ TagManager:
   - Enemy Bullets
   - Explosive Enemy
   - Explosion
+  - Left Wall
+  - Right Wall
+  - Up Wall
+  - Down Wall
   layers:
   - Default
   - TransparentFX

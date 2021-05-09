@@ -9,16 +9,20 @@ public class Bullet : MonoBehaviour
     public bool isEnemy;
 
     [SerializeField] protected float lifeTime;
+
+    [HideInInspector] public bool isShotgun;
     [HideInInspector] public int damage;
 
     [HideInInspector] public float speed;
     [HideInInspector] public Vector3 scale;
 
-    public void Start() => transform.localScale = scale;
+    private void Start() => transform.localScale = scale;
 
     private void Update()
     {
-        transform.Translate(Vector3.right * Time.deltaTime * speed);
+        if (!isShotgun) {
+            transform.Translate(Vector3.right * Time.deltaTime * speed);
+        }
 
         StartCoroutine(DestroyBulletOnTimer(lifeTime));
     }

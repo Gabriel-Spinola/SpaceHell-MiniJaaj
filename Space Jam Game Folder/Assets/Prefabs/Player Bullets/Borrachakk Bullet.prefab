@@ -97,7 +97,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4458816, y: -0.025684163}
+  m_Offset: {x: 0.08922863, y: 0.00016027689}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.44599906, y: 0.51636404}
@@ -108,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1839018, y: 0.68558955}
+  m_Size: {x: 1.4940348, y: 0.5615363}
   m_EdgeRadius: 0
 --- !u!50 &8854164564589980402
 Rigidbody2D:
@@ -118,7 +118,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205608172103398592}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -129,7 +129,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &-1882211905808814872
 MonoBehaviour:
@@ -151,4 +151,4 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 1024
-  bounceTimes: 40
+  bounceTimes: 30
