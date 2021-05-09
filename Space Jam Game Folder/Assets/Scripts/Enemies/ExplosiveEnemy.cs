@@ -22,7 +22,6 @@ public class ExplosiveEnemy : Enemy
 
     private void Update() {
         CheckEnemyState();
-        HandleFlip();
 
         if (player != null) {
             if (enemyState == ENEMY_STATE.ATTACKING) {

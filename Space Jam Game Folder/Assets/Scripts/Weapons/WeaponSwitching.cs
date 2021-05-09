@@ -13,30 +13,6 @@ public class WeaponSwitching : MonoBehaviour
     {
         int previousSelectedWeapon = selectedWeapon;
 
-        // Troca as armas pelo scroll
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f) {
-            if (selectedWeapon >= transform.childCount - 1) {
-                selectedWeapon = 0;
-            }
-            else {
-                for (int i = 0; i < transform.childCount; i++) {
-                    if (transform.childCount - i >= Player.I.level - 1) {
-                        selectedWeapon++;
-                    }
-                }
-            }
-        }
-
-        // Troca as armas pelo scroll 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f) {
-            if (selectedWeapon <= 0) {
-                selectedWeapon = transform.childCount - 1;
-            } 
-            else {
-                selectedWeapon--;
-            }
-        }
-
         if (Input.GetKey(KeyCode.Alpha1)) {
             selectedWeapon = 0;
         }
