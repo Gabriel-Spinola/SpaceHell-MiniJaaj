@@ -13,7 +13,7 @@ public class Explosion : MonoBehaviour
 
     private void Update()
     { 
-        cl.radius = radius;
+        transform.localScale = new Vector3(radius, radius, 0f);
 
         StartCoroutine(DestroyOnTimer(6f));
     }

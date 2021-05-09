@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ExplosiveEnemy : Enemy
 {
+    [SerializeField] private GameObject explosion;
     [SerializeField] private float explosionDelay;
     [SerializeField] private float explosionRadius;
     [SerializeField] private int explosionDamage;
@@ -13,7 +14,11 @@ public class ExplosiveEnemy : Enemy
 
     private bool hasPlayerBeenAffected;
 
-    private void Awake() => rb = GetComponent<Rigidbody2D>();
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    } 
 
     private void Start() 
     { 
@@ -46,9 +51,16 @@ public class ExplosiveEnemy : Enemy
 
     private IEnumerator Attack()
     {
+        spriteRenderer.color = Color.red;
+
         yield return new WaitForSeconds(explosionDelay);
 
         hasPlayerBeenAffected = Physics2D.OverlapCircle(transform.position, explosionRadius, whatIsPlayer);
+
+        Explosion explosion_ = Instantiate(explosion, transform.position, transform.rotation).GetComponent<Explosion>();
+
+        explosion_.damage = explosionDamage;
+        explosion_.radius = explosionRadius;
 
         if (hasPlayerBeenAffected) {
             Player.I.TakeDamage(explosionDamage);
