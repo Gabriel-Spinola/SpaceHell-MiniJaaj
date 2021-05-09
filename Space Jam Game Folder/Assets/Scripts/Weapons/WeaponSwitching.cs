@@ -19,7 +19,11 @@ public class WeaponSwitching : MonoBehaviour
                 selectedWeapon = 0;
             }
             else {
-                selectedWeapon++;
+                for (int i = 0; i < transform.childCount; i++) {
+                    if (transform.childCount - i >= Player.I.level - 1) {
+                        selectedWeapon++;
+                    }
+                }
             }
         }
 
@@ -37,23 +41,23 @@ public class WeaponSwitching : MonoBehaviour
             selectedWeapon = 0;
         }
 
-        if (Input.GetKey(KeyCode.Alpha2) && transform.childCount >= 2) {
+        if (Input.GetKey(KeyCode.Alpha2) && transform.childCount >= 2 && Player.I.level >= 1) {
             selectedWeapon = 1;
         }
 
-        if (Input.GetKey(KeyCode.Alpha3) && transform.childCount >= 3) {
+        if (Input.GetKey(KeyCode.Alpha3) && transform.childCount >= 3 && Player.I.level >= 2) {
             selectedWeapon = 2;
         }
 
-        if (Input.GetKey(KeyCode.Alpha4) && transform.childCount >= 4) {
+        if (Input.GetKey(KeyCode.Alpha4) && transform.childCount >= 4 && Player.I.level >= 3) {
             selectedWeapon = 3;
         }
 
-        if (Input.GetKey(KeyCode.Alpha5) && transform.childCount >= 5) {
+        if (Input.GetKey(KeyCode.Alpha5) && transform.childCount >= 5 && Player.I.level >= 4) {
             selectedWeapon = 4;
         }
 
-        if (Input.GetKey(KeyCode.Alpha6) && transform.childCount >= 6) {
+        if (Input.GetKey(KeyCode.Alpha6) && transform.childCount >= 6 && Player.I.level >= 5) {
             selectedWeapon = 5;
         }
 

@@ -65,10 +65,16 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate() 
+    {
         if (player != null && enemyState == ENEMY_STATE.CHASING) {
             Chase();
         }
+    }
+
+    private void OnDestroy() 
+    {
+        Player.I.enemiesKilled++;
     }
 
     protected void CheckEnemyState() 
