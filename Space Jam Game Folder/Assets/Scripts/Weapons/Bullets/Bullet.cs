@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if (!other.CompareTag("Bullets") && !other.CompareTag("Explosion")) {
+        if (!other.CompareTag("Bullets") && !other.CompareTag("Explosion") && !other.CompareTag("Ex Bullets")) {
             if (!isEnemy) {
                 if (!other.CompareTag("Player")) {
                     Destroy(gameObject);

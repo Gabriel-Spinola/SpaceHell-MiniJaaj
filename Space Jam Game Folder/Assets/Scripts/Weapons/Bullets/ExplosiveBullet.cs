@@ -24,8 +24,8 @@ public class ExplosiveBullet : Bullet
 
     private IEnumerator Explode()
     {
-        if (speed - 0.18f > 0) {
-            speed -= 0.18f;
+        if (speed - 0.185f > 0) {
+            speed -= 0.185f;
         }
 
         yield return new WaitForSeconds(timeToExplode);
