@@ -24,6 +24,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] protected float fireRate;
     [SerializeField] protected float bulletSpeed;
     [SerializeField] protected float spread;
+    [SerializeField] protected AudioSource audioSource;
 
     [SerializeField] protected Vector3 bulletScale;
 
@@ -44,6 +45,7 @@ public class Weapon : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
 
         currentAmmo = ammo;
     }
@@ -79,6 +81,8 @@ public class Weapon : MonoBehaviour
         else {
             if (InputManager.I.isShootingKeyDown && currentAmmo >= 1) {
                 SingleShoot();
+
+                audioSource.Play();
             }
         }
     }
@@ -93,6 +97,8 @@ public class Weapon : MonoBehaviour
 
         // diminui a munição
         currentAmmo--;
+
+        
     }
 
     protected void AutoShoot()
@@ -106,6 +112,8 @@ public class Weapon : MonoBehaviour
             currentBullet.damage = damage;
             currentBullet.speed = bulletSpeed;
             currentBullet.scale = bulletScale;
+
+            audioSource.Play();
 
             // diminui a munição
             currentAmmo--;

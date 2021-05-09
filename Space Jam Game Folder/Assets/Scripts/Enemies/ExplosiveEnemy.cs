@@ -28,6 +28,10 @@ public class ExplosiveEnemy : Enemy
     private void Update() {
         CheckEnemyState();
 
+        if (health <= 0) {
+            StartCoroutine(Attack());
+        }
+
         if (player != null) {
             if (enemyState == ENEMY_STATE.ATTACKING) {
                 StartCoroutine(Attack());
@@ -61,6 +65,7 @@ public class ExplosiveEnemy : Enemy
 
         explosion_.damage = explosionDamage;
         explosion_.radius = explosionRadius;
+        explosion_.audioSource.Play();
 
         if (hasPlayerBeenAffected) {
             Player.I.TakeDamage(explosionDamage);

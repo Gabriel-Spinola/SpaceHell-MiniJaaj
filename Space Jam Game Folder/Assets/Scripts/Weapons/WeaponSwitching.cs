@@ -33,10 +33,6 @@ public class WeaponSwitching : MonoBehaviour
             selectedWeapon = 4;
         }
 
-        if (Input.GetKey(KeyCode.Alpha6) && transform.childCount >= 6 && Player.I.level >= 5) {
-            selectedWeapon = 5;
-        }
-
         if (previousSelectedWeapon != selectedWeapon) {
             SelectWeapon();
         }

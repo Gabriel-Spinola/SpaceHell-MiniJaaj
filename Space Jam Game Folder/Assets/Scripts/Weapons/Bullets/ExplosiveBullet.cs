@@ -34,6 +34,7 @@ public class ExplosiveBullet : Bullet
 
         explosion_.damage = damage;
         explosion_.radius = explosionRadius;
+        explosion_.audioSource.Play();
 
         Destroy(gameObject);
     }

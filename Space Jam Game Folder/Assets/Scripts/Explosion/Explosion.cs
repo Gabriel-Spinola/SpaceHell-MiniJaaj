@@ -6,10 +6,15 @@ public class Explosion : MonoBehaviour
 {
     [HideInInspector] public float radius;
     [HideInInspector] public int damage;
+    [HideInInspector] public AudioSource audioSource;
 
     private CircleCollider2D cl;
 
-    private void Awake() => cl = GetComponent<CircleCollider2D>();
+    private void Awake() 
+    {
+        cl = GetComponent<CircleCollider2D>();
+        audioSource = GetComponent<AudioSource>();
+    } 
 
     private void Update()
     { 

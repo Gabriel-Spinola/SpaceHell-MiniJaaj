@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
         if (enemyWeapon_ != null) {
             enemyWeapon = enemyWeapon_.GetComponent<EnemyWeapon>();
         }
-    }
+    } 
 
     private void Start()
     {

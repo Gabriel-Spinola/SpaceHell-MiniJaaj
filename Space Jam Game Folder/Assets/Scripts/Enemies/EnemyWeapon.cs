@@ -10,6 +10,7 @@ public class EnemyWeapon : Weapon
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
 
         currentAmmo = ammo;
     }
