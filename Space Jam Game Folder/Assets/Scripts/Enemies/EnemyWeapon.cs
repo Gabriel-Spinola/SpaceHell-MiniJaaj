@@ -5,7 +5,7 @@ public class EnemyWeapon : Weapon
 {
     public static EnemyWeapon I { get; private set; }
 
-    public static bool canShoot;
+    public bool canShoot;
 
     private void Start()
     {

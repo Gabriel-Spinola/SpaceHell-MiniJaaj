@@ -22,13 +22,14 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float attackRadius;
     [SerializeField] private float chasingRadius;
 
+    EnemyWeapon enemyWeapon;
     protected ENEMY_STATE enemyState;
     protected Rigidbody2D rb;
     protected SpriteRenderer spriteRenderer;
     protected Vector2 dir;
     private Animator animator;
 
-    protected bool isAttacking;
+    public bool isAttacking;
     protected bool isChasing;
 
     private void Awake()
@@ -38,6 +39,12 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        Transform enemyWeapon_ = transform.Find("Rifle");
+
+        if (enemyWeapon_ != null) {
+            enemyWeapon = enemyWeapon_.GetComponent<EnemyWeapon>();
+        }
     }
 
     private void Start()
@@ -63,7 +70,9 @@ public class Enemy : MonoBehaviour
             }
         }
         else {
-            EnemyWeapon.canShoot = false;
+            if (enemyWeapon != null) {
+                enemyWeapon.canShoot = false;
+            }
 
             animator.SetBool("isChasing", false);
         }
@@ -109,7 +118,9 @@ public class Enemy : MonoBehaviour
 
     private void Chase() 
     {
-        EnemyWeapon.canShoot = false;
+        if (enemyWeapon != null) {
+            enemyWeapon.canShoot = false;
+        }
 
         dir = transform.position - player.position;
         dir.Normalize();
@@ -119,7 +130,9 @@ public class Enemy : MonoBehaviour
 
     private void Attack() 
     {
-        EnemyWeapon.canShoot = true;
+        if (enemyWeapon != null) {
+            enemyWeapon.canShoot = true;
+        }
     }
 
     protected void HandleFlip() 
