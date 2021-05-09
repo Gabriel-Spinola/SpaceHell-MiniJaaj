@@ -27,7 +27,7 @@ public class BounceBullet : Bullet
     {
         transform.Translate(direction.normalized * speed * Time.deltaTime);
         
-        if (bounced >= 3) {
+        if (bounced >= 2) {
             Destroy(gameObject);
         }
 
