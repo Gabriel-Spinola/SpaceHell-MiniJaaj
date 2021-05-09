@@ -23,7 +23,7 @@ namespace Resources
 
             isReloadingKey = Input.GetKeyDown(KeyCode.R);
 
-            if (Input.GetKeyDown(KeyCode.R)) {
+            if (Input.GetKeyDown(KeyCode.Y)) {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }

@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
         Destroy(gameObject);
 
         // Animação de morte e mais
-        yield return null;
+        yield return new WaitForSeconds(1f);
 
         // Restarta a Scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
