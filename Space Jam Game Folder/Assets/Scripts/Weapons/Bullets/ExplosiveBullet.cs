@@ -24,8 +24,8 @@ public class ExplosiveBullet : Bullet
 
     private IEnumerator Explode()
     {
-        if (speed - 0.2f > 0) {
-            speed -= 0.2f;
+        if (speed - 0.18f > 0) {
+            speed -= 0.18f;
         }
 
         yield return new WaitForSeconds(timeToExplode);
@@ -36,5 +36,12 @@ public class ExplosiveBullet : Bullet
         explosion_.radius = explosionRadius;
 
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if (!other.CompareTag("Bullets") && !other.CompareTag("Explosion")) {
+            speed = 0;
+        }
     }
 }

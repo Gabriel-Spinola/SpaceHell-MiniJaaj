@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8128408267497689345}
   - component: {fileID: 2070249641503122359}
+  - component: {fileID: 4002793881804419776}
   - component: {fileID: 8854164564589980402}
   - component: {fileID: -6454607353666443314}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Explosive Bullet
-  m_TagString: Bullets
+  m_TagString: Ex Bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &4002793881804419776
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205608172103398592}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5165059, y: -0.02123344}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.3315998, y: 0.46367854}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9968673, y: 0.6964636}
+  m_EdgeRadius: 0
 --- !u!50 &8854164564589980402
 Rigidbody2D:
   serializedVersion: 4
@@ -118,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnemy: 0
   lifeTime: 5
+  isShotgun: 0
   damage: 0
   speed: 0
   scale: {x: 0, y: 0, z: 0}

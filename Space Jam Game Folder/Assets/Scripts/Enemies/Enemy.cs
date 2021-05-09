@@ -93,9 +93,18 @@ public class Enemy : MonoBehaviour
         EnemyWeapon.canShoot = true;
     }
 
+    protected void HandleFlip() 
+    {
+        Vector2 dir_ = transform.position - player.position;
+        float lookAngle = Mathf.Atan2(dir_.y, dir_.x) * Mathf.Rad2Deg;
+
+        spriteRenderer.flipX = lookAngle < 90 && lookAngle > -90 ? true : false;
+    }
+
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if (other.CompareTag("Bullets")) {
+        
+        if (other.CompareTag("Bullets") && !other.CompareTag("Ex Bullets")) {
             Bullet bullet = other.GetComponent<Bullet>();
 
             if(!bullet.isEnemy) {
@@ -108,13 +117,5 @@ public class Enemy : MonoBehaviour
 
             health -= explosion.damage;
         }
-    }
-
-    protected void HandleFlip() 
-    {
-        Vector2 dir_ = transform.position - player.position;
-        float lookAngle = Mathf.Atan2(dir_.y, dir_.x) * Mathf.Rad2Deg;
-
-        spriteRenderer.flipX = lookAngle < 90 && lookAngle > -90 ? true : false;
     }
 }

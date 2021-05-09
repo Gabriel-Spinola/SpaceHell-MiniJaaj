@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6454607353666443314}
   m_Layer: 9
   m_Name: Explosive Bullet E
-  m_TagString: Bullets
+  m_TagString: Ex Bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnemy: 0
   lifeTime: 5
+  isShotgun: 0
   damage: 0
   speed: 0
   scale: {x: 0, y: 0, z: 0}
