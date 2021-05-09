@@ -13,6 +13,7 @@ TagManager:
   - Right Wall
   - Up Wall
   - Down Wall
+  - Ex Bullets
   layers:
   - Default
   - TransparentFX
