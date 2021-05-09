@@ -22,7 +22,7 @@ public class ExplosiveEnemy : Enemy
 
     private void Start() 
     { 
-        enemyState = ENEMY_STATE.CHASING;
+        enemyState = ENEMY_STATE.NEUTRAL;
     }
 
     private void Update() {

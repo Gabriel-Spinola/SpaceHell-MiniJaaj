@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     public static Player I { get; private set; }
 
-    [HideInInspector] public int enemiesKilled;
+    public int enemiesKilled;
     public int level;
 
     private Rigidbody2D rb;
