@@ -1,6 +1,5 @@
-﻿using System.ComponentModel;
-using Unity.Collections;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Resources
 {
@@ -23,6 +22,10 @@ namespace Resources
             isShootingKeyDown = Input.GetButtonDown("Fire1");
 
             isReloadingKey = Input.GetKeyDown(KeyCode.R);
+
+            if (Input.GetKeyDown(KeyCode.R)) {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
     }
 }

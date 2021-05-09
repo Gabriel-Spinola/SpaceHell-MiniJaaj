@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8128408267497689345}
   - component: {fileID: 2070249641503122359}
   - component: {fileID: 8854164564589980402}
-  - component: {fileID: -6454607353666443314}
+  - component: {fileID: 7376736805042340742}
   m_Layer: 9
-  m_Name: Explosive Bullet
+  m_Name: Poisoned Bullet E
   m_TagString: Bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 205608172103398592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 495770601
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d7c7e1630e6e68148bb4ecb7e338e05c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1082c09c162cd854aa4414783fb5781c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,13 +98,13 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-6454607353666443314
+--- !u!114 &7376736805042340742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,18 +113,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 205608172103398592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3689dc35b457f0e49831c91651890427, type: 3}
+  m_Script: {fileID: 11500000, guid: 96503fdb8c0ccf44ba58a59e4804a237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isEnemy: 0
-  lifeTime: 5
+  lifeTime: 6
   damage: 0
-  speed: 0
-  explosion: {fileID: 8031085710416155938, guid: 1eaaffa63e7f37448be809ee73b1531b,
-    type: 3}
-  whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 2048
-  explosionRadius: 2
-  timeToExplode: 1
-  explosionDuration: 2
+  speed: 10
+  scale: {x: 0, y: 0, z: 0}

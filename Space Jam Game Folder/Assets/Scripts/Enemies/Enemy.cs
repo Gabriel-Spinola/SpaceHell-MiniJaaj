@@ -56,6 +56,8 @@ public class Enemy : MonoBehaviour
         }
         else {
             EnemyWeapon.canShoot = false;
+
+            animator.SetBool("isChasing", false);
         }
     }
 

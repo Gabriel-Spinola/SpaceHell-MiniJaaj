@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8128408267497689345}
   - component: {fileID: 2070249641503122359}
-  - component: {fileID: 7503560398919423852}
+  - component: {fileID: 8626832013332862090}
   - component: {fileID: 8854164564589980402}
   - component: {fileID: 7376736805042340742}
   m_Layer: 9
-  m_Name: Enemy Bullet
+  m_Name: Normal Bullet
   m_TagString: Bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205608172103398592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.08, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 495770601
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d7c7e1630e6e68148bb4ecb7e338e05c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59268d9fc7444b94b86207c2b9421dfc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7503560398919423852
+--- !u!61 &8626832013332862090
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,10 +97,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.45983922, y: -0.022432745}
+  m_Offset: {x: 0.48785123, y: -0.017290264}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.3315998, y: 0.46367854}
+    pivot: {x: 0.32490602, y: 0.46563596}
     oldSize: {x: 2, y: 2}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
@@ -108,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.87027836, y: 0.68012774}
+  m_Size: {x: 0.9432761, y: 0.6688017}
   m_EdgeRadius: 0
 --- !u!50 &8854164564589980402
 Rigidbody2D:
@@ -143,7 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96503fdb8c0ccf44ba58a59e4804a237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnemy: 1
+  isEnemy: 0
   lifeTime: 6
   damage: 0
   speed: 10
+  scale: {x: 0, y: 0, z: 0}

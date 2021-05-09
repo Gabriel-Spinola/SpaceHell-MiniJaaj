@@ -21,6 +21,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] protected float reloadSpeed;
     [SerializeField] protected float fireRate;
     [SerializeField] protected float bulletSpeed;
+    [SerializeField] protected Vector3 bulletScale;
 
     protected SpriteRenderer spriteRenderer;
 
@@ -84,6 +85,7 @@ public class Weapon : MonoBehaviour
         Bullet currentBullet = Instantiate(bullet, gunTip.position, transform.rotation).GetComponent<Bullet>();
         currentBullet.damage = damage;
         currentBullet.speed = bulletSpeed;
+        currentBullet.scale = bulletScale;
 
         // diminui a munição
         currentAmmo--;
@@ -99,6 +101,7 @@ public class Weapon : MonoBehaviour
             Bullet currentBullet = Instantiate(bullet, gunTip.position, transform.rotation).GetComponent<Bullet>();
             currentBullet.damage = damage;
             currentBullet.speed = bulletSpeed;
+            currentBullet.scale = bulletScale;
 
             // diminui a munição
             currentAmmo--;

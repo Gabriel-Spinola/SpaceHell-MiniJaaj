@@ -12,6 +12,9 @@ public class Bullet : MonoBehaviour
     [HideInInspector] public int damage;
 
     [HideInInspector] public float speed;
+    [HideInInspector] public Vector3 scale;
+
+    public void Start() => transform.localScale = scale;
 
     private void Update()
     {
@@ -22,7 +25,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if (!other.CompareTag("Bullets")) {
+        if (!other.CompareTag("Bullets") && !other.CompareTag("Explosion")) {
             if (!isEnemy) {
                 if (!other.CompareTag("Player")) {
                     Destroy(gameObject);
