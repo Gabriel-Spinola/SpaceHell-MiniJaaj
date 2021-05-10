@@ -35,7 +35,7 @@ public class Weapon : MonoBehaviour
     protected float lookAngle;
     protected float nextTimeToFire = 0f;
 
-    protected int currentAmmo;
+    public int currentAmmo;
 
     private void OnEnable() 
     {
