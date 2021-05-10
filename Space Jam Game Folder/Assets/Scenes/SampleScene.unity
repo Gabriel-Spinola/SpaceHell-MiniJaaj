@@ -581,6 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 2104992318}
   isAuto: 0
   damage: 20
@@ -592,6 +593,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &115173363
 SpriteRenderer:
@@ -2261,6 +2263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 185748256}
   isAuto: 0
   damage: 20
@@ -2272,6 +2275,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &330041080
 SpriteRenderer:
@@ -2688,6 +2692,7 @@ RectTransform:
   m_Children:
   - {fileID: 120046601}
   - {fileID: 2080879021}
+  - {fileID: 383650390}
   m_Father: {fileID: 1747121912}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2752,7 +2757,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2955,6 +2960,43 @@ Transform:
   m_Father: {fileID: 290165325}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &383650389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 383650390}
+  m_Layer: 5
+  m_Name: Alerts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &383650390
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383650389}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1234194225}
+  - {fileID: 1026999151}
+  m_Father: {fileID: 369510896}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &404064819
 GameObject:
   m_ObjectHideFlags: 0
@@ -3094,6 +3136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 2107919446}
   isAuto: 0
   damage: 20
@@ -3105,6 +3148,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &431289983
 SpriteRenderer:
@@ -27086,6 +27130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: 4604578555db746409af8cb7fb81f69c, type: 3}
+  ammoUI: {fileID: 1209650829}
   gunTip: {fileID: 193179498}
   isAuto: 1
   damage: 10
@@ -27097,6 +27142,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.8, y: 0.8, z: 0.8}
+  currentAmmo: 0
 --- !u!212 &745308805
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27386,6 +27432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 610141578}
   isAuto: 0
   damage: 20
@@ -27397,6 +27444,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &745928754
 SpriteRenderer:
@@ -28403,6 +28451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 63512067}
   isAuto: 0
   damage: 10
@@ -28414,6 +28463,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &908486423
 SpriteRenderer:
@@ -29206,6 +29256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 560838844}
   isAuto: 0
   damage: 10
@@ -29217,6 +29268,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &921672395
 SpriteRenderer:
@@ -29405,6 +29457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 933835838}
   isAuto: 0
   damage: 20
@@ -29416,6 +29469,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &973606658
 SpriteRenderer:
@@ -29610,6 +29664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 15489983}
   isAuto: 0
   damage: 40
@@ -29621,6 +29676,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &976759207
 SpriteRenderer:
@@ -29768,6 +29824,140 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1026999150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1026999151}
+  - component: {fileID: 1026999153}
+  - component: {fileID: 1026999152}
+  m_Layer: 5
+  m_Name: "Voc\xEA liberou 4"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1026999151
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026999150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 383650390}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 412}
+  m_SizeDelta: {x: 1700, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1026999152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026999150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Voce  Liberou  duas novas  armas.  Aperte 3 e 4  para  as  utilizar
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 1abe86f4c8c333a46ba44e015a8a6e2b, type: 2}
+  m_sharedMaterial: {fileID: 918501610869174590, guid: 1abe86f4c8c333a46ba44e015a8a6e2b,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4279308561
+  m_fontColor: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 60
+  m_fontSizeBase: 60
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1026999153
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026999150}
+  m_CullTransparentMesh: 0
 --- !u!1 &1047350819
 GameObject:
   m_ObjectHideFlags: 0
@@ -30227,6 +30417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 286930478}
   isAuto: 0
   damage: 20
@@ -30238,6 +30429,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &1062043192
 SpriteRenderer:
@@ -38950,6 +39142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 1297675119}
   isAuto: 0
   damage: 40
@@ -38961,6 +39154,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &1190091378
 SpriteRenderer:
@@ -39108,6 +39302,154 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1209650827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1209650828}
+  - component: {fileID: 1209650830}
+  - component: {fileID: 1209650829}
+  - component: {fileID: 1209650831}
+  m_Layer: 5
+  m_Name: Muni
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1209650828
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209650827}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2080879021}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 661, y: -597}
+  m_SizeDelta: {x: 600, y: 600}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1209650829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209650827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 30 Balas
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 1abe86f4c8c333a46ba44e015a8a6e2b, type: 2}
+  m_sharedMaterial: {fileID: 918501610869174590, guid: 1abe86f4c8c333a46ba44e015a8a6e2b,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4284580607
+  m_fontColor: {r: 1, g: 0.50949323, b: 0.3820755, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 100
+  m_fontSizeBase: 100
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1209650830
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209650827}
+  m_CullTransparentMesh: 0
+--- !u!114 &1209650831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209650827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d2d559d79206e44a5f856b598a20e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texta: {fileID: 1209650829}
 --- !u!1 &1227054803
 GameObject:
   m_ObjectHideFlags: 0
@@ -39345,6 +39687,140 @@ Transform:
   m_Father: {fileID: 1545554406}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1234194224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1234194225}
+  - component: {fileID: 1234194227}
+  - component: {fileID: 1234194226}
+  m_Layer: 5
+  m_Name: "Voc\xEA liberou 2"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1234194225
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234194224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 383650390}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 412}
+  m_SizeDelta: {x: 1700, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1234194226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234194224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Voce  Liberou  uma  nova  arma.  Aperte 2  para  a  utilizar
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 1abe86f4c8c333a46ba44e015a8a6e2b, type: 2}
+  m_sharedMaterial: {fileID: 918501610869174590, guid: 1abe86f4c8c333a46ba44e015a8a6e2b,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4279308561
+  m_fontColor: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 60
+  m_fontSizeBase: 60
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1234194227
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234194224}
+  m_CullTransparentMesh: 0
 --- !u!1 &1263640219
 GameObject:
   m_ObjectHideFlags: 0
@@ -39422,6 +39898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 2116357548}
   isAuto: 0
   damage: 20
@@ -39433,6 +39910,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &1282601799
 SpriteRenderer:
@@ -39742,6 +40220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 1674738424}
   isAuto: 0
   damage: 20
@@ -39753,6 +40232,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &1370752158
 SpriteRenderer:
@@ -41071,6 +41551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 1232659418}
   isAuto: 0
   damage: 20
@@ -41082,6 +41563,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &1545554408
 SpriteRenderer:
@@ -41276,6 +41758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 1089907291}
   isAuto: 0
   damage: 40
@@ -41287,6 +41770,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &1572185422
 SpriteRenderer:
@@ -41607,6 +42091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 1698642971}
   isAuto: 0
   damage: 20
@@ -41618,6 +42103,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &1599357554
 SpriteRenderer:
@@ -42805,6 +43291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: 4604578555db746409af8cb7fb81f69c, type: 3}
+  ammoUI: {fileID: 1209650829}
   gunTip: {fileID: 706506078}
   isAuto: 1
   damage: 10
@@ -42816,6 +43303,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.8, y: 0.8, z: 0.8}
+  currentAmmo: 0
 --- !u!212 &1782313142
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43171,6 +43659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 669186875}
   isAuto: 0
   damage: 5
@@ -43182,6 +43671,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &1792823901
 SpriteRenderer:
@@ -43451,6 +43941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: 7c64ee94a4e6aa94a9629a32c668aa34, type: 3}
+  ammoUI: {fileID: 1209650829}
   gunTip: {fileID: 1116098198}
   isAuto: 1
   damage: 5
@@ -43462,6 +43953,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.8, y: 0.8, z: 0.8}
+  currentAmmo: 0
 --- !u!212 &1813192721
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43655,6 +44147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 2073434667}
   isAuto: 0
   damage: 20
@@ -43666,6 +44159,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &1818927669
 SpriteRenderer:
@@ -44099,6 +44593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: 4604578555db746409af8cb7fb81f69c, type: 3}
+  ammoUI: {fileID: 1209650829}
   gunTip: {fileID: 750476773}
   isAuto: 1
   damage: 30
@@ -44110,6 +44605,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
 --- !u!212 &1843164509
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44465,6 +44961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 1720532603}
   isAuto: 0
   damage: 40
@@ -44476,6 +44973,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &1854742829
 SpriteRenderer:
@@ -44670,6 +45168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: 94ba2b2ac0faeee4b872f47530db4c58, type: 3}
+  ammoUI: {fileID: 1209650829}
   gunTip: {fileID: 1263640220}
   isAuto: 0
   damage: 20
@@ -44681,6 +45180,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.85, y: 0.85, z: 0.85}
+  currentAmmo: 0
 --- !u!212 &1888131298
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44874,6 +45374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 174187168}
   isAuto: 0
   damage: 40
@@ -44885,6 +45386,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &1890810174
 SpriteRenderer:
@@ -45623,6 +46125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: 4d7068f4536ccd0459058d8ddea81f28, type: 3}
+  ammoUI: {fileID: 1209650829}
   gunTip: {fileID: 2096468229}
   isAuto: 0
   damage: 40
@@ -45634,6 +46137,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
 --- !u!212 &2041383559
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45827,6 +46331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
+  ammoUI: {fileID: 0}
   gunTip: {fileID: 794351037}
   isAuto: 0
   damage: 20
@@ -45838,6 +46343,7 @@ MonoBehaviour:
   spread: 0
   audioSource: {fileID: 0}
   bulletScale: {x: 0.9, y: 0.9, z: 0.9}
+  currentAmmo: 0
   canShoot: 0
 --- !u!212 &2044634922
 SpriteRenderer:
@@ -46041,7 +46547,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1209650828}
   m_Father: {fileID: 369510896}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
