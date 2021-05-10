@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject text2;
     [SerializeField] private GameObject text3;
 
+    public GameObject gameOver;
+    public GameObject vic;
+
     public int enemiesKilled;
     public int level;
 
@@ -67,8 +70,11 @@ public class Player : MonoBehaviour
         }
 
         // Morre
-        if (health <= 0)
-            StartCoroutine(Die());
+        if (health <= 0) {
+            Destroy(gameObject);
+
+            gameOver.SetActive(true);
+        }
     }
 
     private void FixedUpdate()

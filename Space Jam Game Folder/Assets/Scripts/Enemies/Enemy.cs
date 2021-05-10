@@ -5,6 +5,8 @@ public class Enemy : MonoBehaviour
 {
     public static Enemy I { get; private set; }
 
+    public bool isBoss;
+
     protected enum ENEMY_STATE {
         NEUTRAL,
         CHASING,
@@ -31,6 +33,7 @@ public class Enemy : MonoBehaviour
     protected SpriteRenderer spriteRenderer;
     protected Vector2 dir;
     private Animator animator;
+    public GameObject vic;
 
     public bool isAttacking;
     protected bool isChasing;
@@ -93,6 +96,10 @@ public class Enemy : MonoBehaviour
     private void OnDestroy() 
     {
         Player.I.enemiesKilled++;
+
+        if (isBoss) {
+            vic.SetActive(true);
+        }
     }
 
     protected void CheckEnemyState() 
