@@ -60,8 +60,7 @@ public class Enemy : MonoBehaviour
         animator.SetBool("isChasing", isChasing);
 
         if (health <= 0) {
-            Blood blod = Instantiate(deadBody, transform.position, Quaternion.identity).GetComponent<Blood>();
-            blod.canIns = true;
+            Instantiate(deadBody, transform.position, Quaternion.identity);
 
             Destroy(gameObject);
         }

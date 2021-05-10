@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 232639915956569058}
   - component: {fileID: 4421167068526609818}
-  - component: {fileID: -454662214088277411}
   m_Layer: 0
   m_Name: Tank Dead
   m_TagString: Untagged
@@ -82,16 +81,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-454662214088277411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8945211262385900316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 043ae411f3a7afd4989bfabe8c927b00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blood: {fileID: 8020688079132725732, guid: de6313d9d1935ae44a993ac9e1345d38, type: 3}

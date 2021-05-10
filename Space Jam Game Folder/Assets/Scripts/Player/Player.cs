@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     [Header("Stats")]
 
-    [SerializeField] private int health;
+    [HideInInspector] public int health;
 
     private float lookAngle;
 
