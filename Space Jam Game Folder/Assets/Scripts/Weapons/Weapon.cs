@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using Resources;
+using TMPro;
 
 public class Weapon : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Weapon : MonoBehaviour
 
     [Header("References")]
     public GameObject bullet;
+    public TMP_Text ammoUI;
     
     [SerializeField] protected Transform gunTip;
 
@@ -54,6 +56,8 @@ public class Weapon : MonoBehaviour
     {
         HandleRotation();
         HandleWeapon();
+
+        ammoUI.text = currentAmmo.ToString() + " balas";
     }
 
     private void HandleWeapon() 
@@ -96,9 +100,7 @@ public class Weapon : MonoBehaviour
         currentBullet.scale = bulletScale;
 
         // diminui a munição
-        currentAmmo--;
-
-        
+        currentAmmo--;   
     }
 
     protected void AutoShoot()
