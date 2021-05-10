@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Resources;
+using UnityEditor;
 
 public class Player : MonoBehaviour
 {
@@ -70,5 +71,8 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void TakeDamage(int damage) => health -= damage;
+    public void TakeDamage(int damage)
+    { 
+        health -= damage;
+    }
 }

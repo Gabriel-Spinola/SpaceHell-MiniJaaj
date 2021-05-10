@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Enemy : MonoBehaviour
 
     [Header("References")]
     public Transform player;
+
+    [SerializeField] protected GameObject deadBody;
     [SerializeField] protected LayerMask whatIsPlayer;
     [SerializeField] protected LayerMask whatIsWall;
 
@@ -57,6 +60,9 @@ public class Enemy : MonoBehaviour
         animator.SetBool("isChasing", isChasing);
 
         if (health <= 0) {
+            Blood blod = Instantiate(deadBody, transform.position, Quaternion.identity).GetComponent<Blood>();
+            blod.canIns = true;
+
             Destroy(gameObject);
         }
 
@@ -151,6 +157,8 @@ public class Enemy : MonoBehaviour
 
             if(!bullet.isEnemy) {
                 health -= bullet.damage;
+
+                StartCoroutine(Dan());
             }
         }
 
@@ -158,6 +166,17 @@ public class Enemy : MonoBehaviour
             Explosion explosion = other.GetComponent<Explosion>();
 
             health -= explosion.damage;
+
+            StartCoroutine(Dan());
         }
+    }
+
+    private IEnumerator Dan()
+    {
+        spriteRenderer.color = Color.red;
+
+        yield return new WaitForSeconds(0.2f);
+
+        spriteRenderer.color = Color.white;
     }
 }

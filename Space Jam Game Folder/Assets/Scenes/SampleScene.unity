@@ -200,6 +200,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 8945211262385900316, guid: 15de71444e0859c43b211d32af20e997,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -581,7 +583,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 2104992318}
   isAuto: 0
-  damage: 1
+  damage: 20
   isShotgun: 0
   ammo: 20
   reloadSpeed: 1.5
@@ -899,6 +901,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 6993861515900678029, guid: 2b5fe2de332acec41829b4ff4757e7de,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -1496,6 +1500,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 4285178414860048228, guid: e55602d963a5a1e4398d275fb39c361b,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -1683,8 +1689,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesKilled: 0
   level: 0
-  moveSpeed: 100
-  health: 5
+  moveSpeed: 12
+  health: 100
 --- !u!50 &229526657
 Rigidbody2D:
   serializedVersion: 4
@@ -1965,6 +1971,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 8945211262385900316, guid: 15de71444e0859c43b211d32af20e997,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -2191,7 +2199,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 185748256}
   isAuto: 0
-  damage: 1
+  damage: 20
   isShotgun: 0
   ammo: 20
   reloadSpeed: 1.5
@@ -2428,6 +2436,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 4285178414860048228, guid: e55602d963a5a1e4398d275fb39c361b,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -2629,6 +2639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 0}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -2644,7 +2655,7 @@ MonoBehaviour:
     type: 3}
   explosionDelay: 1
   explosionRadius: 3.5
-  explosionDamage: 5
+  explosionDamage: 50
   drawGizmos: 0
 --- !u!50 &372165544
 Rigidbody2D:
@@ -2921,7 +2932,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 2107919446}
   isAuto: 0
-  damage: 1
+  damage: 20
   isShotgun: 0
   ammo: 20
   reloadSpeed: 1.5
@@ -3147,6 +3158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 4285178414860048228, guid: e55602d963a5a1e4398d275fb39c361b,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -3349,6 +3362,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 8945211262385900316, guid: 15de71444e0859c43b211d32af20e997,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -3774,6 +3789,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 4285178414860048228, guid: e55602d963a5a1e4398d275fb39c361b,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -3988,6 +4005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 0}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -4003,7 +4021,7 @@ MonoBehaviour:
     type: 3}
   explosionDelay: 1
   explosionRadius: 3.5
-  explosionDamage: 5
+  explosionDamage: 50
   drawGizmos: 0
 --- !u!50 &543132672
 Rigidbody2D:
@@ -18160,6 +18178,24 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
+  - first: {x: -77, y: 22, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -76, y: 22, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
   - first: {x: -75, y: 22, z: 0}
     second:
       serializedVersion: 2
@@ -18172,8 +18208,26 @@ Tilemap:
   - first: {x: -74, y: 22, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileIndex: 5
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -73, y: 22, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -72, y: 22, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -25946,9 +26000,9 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 151
     m_Data: {fileID: 11400000, guid: 4c0ec891a32adac42a2f828983eada0c, type: 2}
-  - m_RefCount: 147
+  - m_RefCount: 146
     m_Data: {fileID: 11400000, guid: 3479807223bec73428c7b3a346c560ba, type: 2}
-  - m_RefCount: 172
+  - m_RefCount: 177
     m_Data: {fileID: 11400000, guid: 4fbd4f3837f2f8444bde2b64fd17f8af, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -26052,11 +26106,11 @@ Tilemap:
       type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 147
+  - m_RefCount: 146
     m_Data: {fileID: 922424046108175333, guid: 9a25916f9e7f23746b2b6902b14136ea, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 172
+  - m_RefCount: 177
     m_Data: {fileID: -6925154376186504650, guid: 9a25916f9e7f23746b2b6902b14136ea,
       type: 3}
   - m_RefCount: 0
@@ -26196,7 +26250,7 @@ Tilemap:
     m_Data: {fileID: -6614373457484812694, guid: 9a25916f9e7f23746b2b6902b14136ea,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 2383
+  - m_RefCount: 2387
     m_Data:
       e00: 1
       e01: 0
@@ -26215,7 +26269,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 2383
+  - m_RefCount: 2387
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: 0.0000000019216913, g: 0.0000000019216913, b: 0.0000000019216913,
@@ -26420,6 +26474,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 4285178414860048228, guid: e55602d963a5a1e4398d275fb39c361b,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -27056,7 +27112,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 610141578}
   isAuto: 0
-  damage: 1
+  damage: 20
   isShotgun: 0
   ammo: 20
   reloadSpeed: 1.5
@@ -27197,6 +27253,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 6993861515900678029, guid: 2b5fe2de332acec41829b4ff4757e7de,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -27637,6 +27695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 0}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -27652,7 +27711,7 @@ MonoBehaviour:
     type: 3}
   explosionDelay: 1
   explosionRadius: 3.5
-  explosionDamage: 5
+  explosionDamage: 50
   drawGizmos: 0
 --- !u!50 &886350368
 Rigidbody2D:
@@ -27818,6 +27877,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 8945211262385900316, guid: 15de71444e0859c43b211d32af20e997,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -28068,7 +28129,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 63512067}
   isAuto: 0
-  damage: 1
+  damage: 10
   isShotgun: 0
   ammo: 50
   reloadSpeed: 1.5
@@ -28292,6 +28353,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 8945211262385900316, guid: 15de71444e0859c43b211d32af20e997,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -28429,7 +28492,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919220818}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -18.02, y: 23.458, z: 0}
+  m_LocalPosition: {x: 11.94, y: 1.52, z: 0}
   m_LocalScale: {x: 3.0664403, y: 0.95471996, z: 1}
   m_Children: []
   m_Father: {fileID: 1317916757}
@@ -28447,7 +28510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c7206e8f9881754191aef44073fe19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountOfEnemiesKilledNeeded: 17
+  amountOfEnemiesKilledNeeded: 4
 --- !u!50 &919220821
 Rigidbody2D:
   serializedVersion: 4
@@ -28613,6 +28676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 0}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -28867,7 +28931,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 560838844}
   isAuto: 0
-  damage: 1
+  damage: 10
   isShotgun: 0
   ammo: 50
   reloadSpeed: 1.5
@@ -29066,7 +29130,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 933835838}
   isAuto: 0
-  damage: 1
+  damage: 20
   isShotgun: 0
   ammo: 20
   reloadSpeed: 1.5
@@ -29271,7 +29335,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 15489983}
   isAuto: 0
-  damage: 5
+  damage: 40
   isShotgun: 0
   ammo: 10
   reloadSpeed: 1
@@ -29531,6 +29595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 6993861515900678029, guid: 2b5fe2de332acec41829b4ff4757e7de,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -29811,7 +29877,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 286930478}
   isAuto: 0
-  damage: 1
+  damage: 20
   isShotgun: 0
   ammo: 20
   reloadSpeed: 1.5
@@ -34625,65 +34691,11 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
-  - first: {x: -77, y: 22, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 32
-      m_TileSpriteIndex: 52
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
-  - first: {x: -76, y: 22, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 24
-      m_TileSpriteIndex: 51
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
-  - first: {x: -75, y: 22, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 32
-      m_TileSpriteIndex: 52
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
-  - first: {x: -74, y: 22, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 32
-      m_TileSpriteIndex: 52
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
-  - first: {x: -73, y: 22, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 24
-      m_TileSpriteIndex: 51
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
-  - first: {x: -72, y: 22, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 32
-      m_TileSpriteIndex: 52
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
   - first: {x: -71, y: 22, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 24
-      m_TileSpriteIndex: 51
+      m_TileSpriteIndex: 52
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -37717,7 +37729,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 3
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 3479807223bec73428c7b3a346c560ba, type: 2}
   - m_RefCount: 39
     m_Data: {fileID: 11400000, guid: 888c9247117613a498f230f335b705e9, type: 2}
@@ -37733,8 +37745,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: ef946d0b1f3fb7d4abb98340d029c9b4, type: 2}
   - m_RefCount: 42
     m_Data: {fileID: 11400000, guid: 1283261d8a897c54691ac36203c220a8, type: 2}
-  - m_RefCount: 4
-    m_Data: {fileID: 11400000, guid: 4fbd4f3837f2f8444bde2b64fd17f8af, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 36
     m_Data: {fileID: 11400000, guid: 0e38a15f6a2639e4aa33aee9ecfa9068, type: 2}
   - m_RefCount: 9
@@ -37905,16 +37917,15 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 3
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
     m_Data: {fileID: 922424046108175333, guid: 9a25916f9e7f23746b2b6902b14136ea, type: 3}
-  - m_RefCount: 4
-    m_Data: {fileID: -6925154376186504650, guid: 9a25916f9e7f23746b2b6902b14136ea,
-      type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 3048892388686381023, guid: 9a25916f9e7f23746b2b6902b14136ea,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 846
+  - m_RefCount: 840
     m_Data:
       e00: 1
       e01: 0
@@ -37933,7 +37944,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 846
+  - m_RefCount: 840
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
@@ -38187,22 +38198,6 @@ CompositeCollider2D:
         Y: 260000000
       - X: -770000000
         Y: 230000100
-      - X: -770000041
-        Y: 230000100
-      - X: -770000100
-        Y: 230000041
-      - X: -770000100
-        Y: 219999959
-      - X: -770000041
-        Y: 219999900
-      - X: -699999959
-        Y: 219999900
-      - X: -699999900
-        Y: 219999959
-      - X: -699999900
-        Y: 230000041
-      - X: -699999959
-        Y: 230000100
       - X: -710000000
         Y: 230000100
       - X: -710000000
@@ -38263,6 +38258,22 @@ CompositeCollider2D:
         Y: -20000000
       - X: 150000000
         Y: -80000000
+    - - X: -699999900
+        Y: 219999959
+      - X: -699999900
+        Y: 230000041
+      - X: -699999959
+        Y: 230000100
+      - X: -709999959
+        Y: 230000100
+      - X: -709999900
+        Y: 230000041
+      - X: -709999900
+        Y: 219999959
+      - X: -709999959
+        Y: 219999900
+      - X: -699999959
+        Y: 219999900
     - - X: -150000000
         Y: 60000000
       - X: -20000000
@@ -38395,9 +38406,7 @@ CompositeCollider2D:
       - {x: -83, y: 17.000029}
       - {x: -82.99997, y: 26}
       - {x: -77, y: 25.999971}
-      - {x: -76.99998, y: 21.99999}
-      - {x: -69.999985, y: 22.000027}
-      - {x: -70.00002, y: 23.00001}
+      - {x: -76.99997, y: 23.00001}
       - {x: -71, y: 23.00004}
       - {x: -70.99997, y: 28}
       - {x: -67, y: 28.000029}
@@ -38427,6 +38436,10 @@ CompositeCollider2D:
       - {x: 21, y: -7.9999704}
       - {x: 20.999971, y: -2}
       - {x: 15, y: -2.0000293}
+    - - {x: -70.00002, y: 21.99999}
+      - {x: -70.00002, y: 23.00001}
+      - {x: -70.999985, y: 22.999975}
+      - {x: -70.99997, y: 21.99999}
     - - {x: -15.000029, y: 2}
       - {x: -14.999971, y: 6}
       - {x: -2, y: 6.000029}
@@ -38539,7 +38552,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 1297675119}
   isAuto: 0
-  damage: 5
+  damage: 40
   isShotgun: 0
   ammo: 10
   reloadSpeed: 1
@@ -38765,6 +38778,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 4285178414860048228, guid: e55602d963a5a1e4398d275fb39c361b,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -39009,7 +39024,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 2116357548}
   isAuto: 0
-  damage: 1
+  damage: 20
   isShotgun: 0
   ammo: 20
   reloadSpeed: 1.5
@@ -39329,7 +39344,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 1674738424}
   isAuto: 0
-  damage: 1
+  damage: 20
   isShotgun: 0
   ammo: 20
   reloadSpeed: 1.5
@@ -39825,6 +39840,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 6993861515900678029, guid: 2b5fe2de332acec41829b4ff4757e7de,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -40030,6 +40047,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 4285178414860048228, guid: e55602d963a5a1e4398d275fb39c361b,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -40327,6 +40346,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 4285178414860048228, guid: e55602d963a5a1e4398d275fb39c361b,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -40511,7 +40532,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 1232659418}
   isAuto: 0
-  damage: 1
+  damage: 20
   isShotgun: 0
   ammo: 20
   reloadSpeed: 1.5
@@ -40716,7 +40737,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 1089907291}
   isAuto: 0
-  damage: 5
+  damage: 40
   isShotgun: 0
   ammo: 10
   reloadSpeed: 1
@@ -41047,7 +41068,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 1698642971}
   isAuto: 0
-  damage: 1
+  damage: 20
   isShotgun: 0
   ammo: 20
   reloadSpeed: 1.5
@@ -41358,6 +41379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 6993861515900678029, guid: 2b5fe2de332acec41829b4ff4757e7de,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -41627,6 +41650,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 4285178414860048228, guid: e55602d963a5a1e4398d275fb39c361b,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -41949,6 +41974,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 6993861515900678029, guid: 2b5fe2de332acec41829b4ff4757e7de,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -42335,6 +42362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 0}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -42350,7 +42378,7 @@ MonoBehaviour:
     type: 3}
   explosionDelay: 1
   explosionRadius: 3.5
-  explosionDamage: 5
+  explosionDamage: 50
   drawGizmos: 0
 --- !u!50 &1792349829
 Rigidbody2D:
@@ -42907,7 +42935,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 2073434667}
   isAuto: 0
-  damage: 1
+  damage: 20
   isShotgun: 0
   ammo: 20
   reloadSpeed: 1.5
@@ -43165,6 +43193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 4285178414860048228, guid: e55602d963a5a1e4398d275fb39c361b,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -43551,6 +43581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 0}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -43714,7 +43745,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 1720532603}
   isAuto: 0
-  damage: 5
+  damage: 40
   isShotgun: 0
   ammo: 10
   reloadSpeed: 1
@@ -44123,7 +44154,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 174187168}
   isAuto: 0
-  damage: 5
+  damage: 40
   isShotgun: 0
   ammo: 10
   reloadSpeed: 1
@@ -44326,6 +44357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 0}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -44341,7 +44373,7 @@ MonoBehaviour:
     type: 3}
   explosionDelay: 1
   explosionRadius: 3.5
-  explosionDamage: 5
+  explosionDamage: 50
   drawGizmos: 0
 --- !u!50 &1958152872
 Rigidbody2D:
@@ -44654,6 +44686,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 4285178414860048228, guid: e55602d963a5a1e4398d275fb39c361b,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -45073,7 +45107,7 @@ MonoBehaviour:
   bullet: {fileID: 205608172103398592, guid: cf2b9b9e31c0d884e9177e0587eabf53, type: 3}
   gunTip: {fileID: 794351037}
   isAuto: 0
-  damage: 1
+  damage: 20
   isShotgun: 0
   ammo: 20
   reloadSpeed: 1.5
@@ -45449,6 +45483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 229526655}
+  deadBody: {fileID: 4285178414860048228, guid: e55602d963a5a1e4398d275fb39c361b,
+    type: 3}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
