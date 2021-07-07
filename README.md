@@ -1,6 +1,6 @@
 # Space Jam
 
-### The source code of my first Jam
+### The source code of my first Game Jam
 
 A game created for the Mini-jaaj jam (hosted by [Andre Young](https://www.youtube.com/user/n00berplayer)), made in 3 days
 
