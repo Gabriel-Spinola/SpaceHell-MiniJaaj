@@ -6,4 +6,4 @@ A game created for the Mini-jaaj jam (hosted by [Andre Young](https://www.youtub
 
 The code it's really bad because I was running out of time 😳
 
-Game Page: https://zero-7.itch.io/space-hell-mini-jaaj
+Game's Page: https://zero-7.itch.io/space-hell-mini-jaaj
