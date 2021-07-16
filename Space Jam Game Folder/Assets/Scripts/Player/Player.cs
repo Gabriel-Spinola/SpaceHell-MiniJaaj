@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
     {
         textUI.SetActive(true);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         textUI.SetActive(false);
     }

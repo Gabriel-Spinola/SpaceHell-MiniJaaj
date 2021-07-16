@@ -40243,7 +40243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 30 Balas
+  m_text: 30 Bullets
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1abe86f4c8c333a46ba44e015a8a6e2b, type: 2}
   m_sharedMaterial: {fileID: 918501610869174590, guid: 1abe86f4c8c333a46ba44e015a8a6e2b,
@@ -40253,8 +40253,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284580607
-  m_fontColor: {r: 1, g: 0.50949323, b: 0.3820755, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -40628,7 +40628,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Voce  Liberou  uma  nova  arma.  Aperte 2  para  a  utilizar
+  m_text: You unlocked a new weapon, press 2 to equip.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1abe86f4c8c333a46ba44e015a8a6e2b, type: 2}
   m_sharedMaterial: {fileID: 918501610869174590, guid: 1abe86f4c8c333a46ba44e015a8a6e2b,
@@ -43436,7 +43436,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Voce  Liberou  duas novas  armas.  Aperte 3 e 4  para  as  utilizar
+  m_text: You unlocked two new weapons, press 3 or 4 to equip.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1abe86f4c8c333a46ba44e015a8a6e2b, type: 2}
   m_sharedMaterial: {fileID: 918501610869174590, guid: 1abe86f4c8c333a46ba44e015a8a6e2b,
@@ -46585,7 +46585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Voce  Liberou  uma  nova  arma.  Aperte 5  para  a  utilizar
+  m_text: You unlocked a new weapon, press 5 to equip.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1abe86f4c8c333a46ba44e015a8a6e2b, type: 2}
   m_sharedMaterial: {fileID: 918501610869174590, guid: 1abe86f4c8c333a46ba44e015a8a6e2b,

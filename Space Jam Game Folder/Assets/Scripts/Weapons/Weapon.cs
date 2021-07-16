@@ -57,7 +57,7 @@ public class Weapon : MonoBehaviour
         HandleRotation();
         HandleWeapon();
 
-        ammoUI.text = currentAmmo.ToString() + " balas";
+        ammoUI.text = currentAmmo.ToString() + " Bullets";
     }
 
     private void HandleWeapon() 

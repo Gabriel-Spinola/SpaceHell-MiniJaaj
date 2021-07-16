@@ -1444,8 +1444,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Seu  objetivo  \xE9 matar  todos  os  alienigenas  para  liberar novas 
-    salas  e chegar  at\xE9 o boss  final"
+  m_text: Your objective is to kill all aliens and survive.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b14ade4d913a0e4fb29c54caa10b45d, type: 2}
   m_sharedMaterial: {fileID: -1482200760884415644, guid: 0b14ade4d913a0e4fb29c54caa10b45d,
@@ -2191,8 +2190,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Use  W A S D  para  se  movimentar,  bot\xE3o  esquerdo  do  mouse  para 
-    atirar,  R  para   recarregar  e  1 2 3 4 5 6  para  trocar  de  arma"
+  m_text: '[W A S D]  to move,  [LeftMouse] to shoot, [R] to reload, and [1 2 3 4
+    5] to switch weapon.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b14ade4d913a0e4fb29c54caa10b45d, type: 2}
   m_sharedMaterial: {fileID: -1482200760884415644, guid: 0b14ade4d913a0e4fb29c54caa10b45d,
