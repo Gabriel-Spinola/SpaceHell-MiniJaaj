@@ -42,9 +42,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    bool isDrawned1 = false;
-    bool isDrawned2 = false;
-    bool isDrawned3 = false;
+    bool isText1 = false, isText2 = false, isText3 = false;
+
     private void Update()
     {
         // Pega a direção em que o player esta olhando (em angulo)
@@ -55,18 +54,19 @@ public class Player : MonoBehaviour
         movement.x = InputManager.I.xAxis;
         movement.y = InputManager.I.yAxis;
 
-        if (level == 1 && !isDrawned1) {
-            StartCoroutine(DrawText1());
-
-            
+        if (level == 1 && !isText1) {
+            StartCoroutine(DrawText(text1));
+            isText1 = true;
         }
 
-        if (level == 3 && !isDrawned2) {
-            StartCoroutine(DrawText2());
+        if (level == 3 && !isText2) {
+            StartCoroutine(DrawText(text2));
+            isText2 = true;
         }
 
-        if (level > 3 && !isDrawned3) {
-            StartCoroutine(DrawText1());
+        if (level > 3 && !isText3) {
+            StartCoroutine(DrawText(text3));
+            isText3 = true;
         }
 
         // Morre
@@ -103,33 +103,12 @@ public class Player : MonoBehaviour
         health -= damage;
     }
 
-    private IEnumerator DrawText1() 
+    private IEnumerator DrawText(GameObject textUI) 
     {
-        text1.SetActive(true);
+        textUI.SetActive(true);
 
         yield return new WaitForSeconds(2f);
 
-        text1.SetActive(false);
-        isDrawned1 = true;
-    }
-
-    private IEnumerator DrawText2() 
-    {
-        text2.SetActive(true);
-
-        yield return new WaitForSeconds(2f);
-
-        text2.SetActive(false);
-        isDrawned2 = true;
-    }
-
-    private IEnumerator DrawText3() 
-    {
-        text3.SetActive(true);
-
-        yield return new WaitForSeconds(2f);
-
-        text3.SetActive(false);
-        isDrawned3 = true;
+        textUI.SetActive(false);
     }
 }

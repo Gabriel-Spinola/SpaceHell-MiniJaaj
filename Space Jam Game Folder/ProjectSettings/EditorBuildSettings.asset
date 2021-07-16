@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Cena de testes espaciais.unity
+    path: Assets/Scenes/Menu.unity
     guid: 1a0a74c89b7db43468515583370eae7b
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
