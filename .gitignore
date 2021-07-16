@@ -9,7 +9,7 @@
 [Bb]uilds/
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
-[Aa]ssets/[Tt]extMesh_Pro*
+[Aa]ssets/TextMesh_Pro/*
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
